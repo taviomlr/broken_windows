@@ -1,0 +1,9 @@
+inherited frmCadAplicacao: TfrmCadAplicacao
+  Caption = 'Cadastro de Aplica'#231#227'o'
+  TextHeight = 15
+  inherited pnlRodape: TPanel
+    inherited btnNavigator: TDBNavigator
+      Hints.Strings = ()
+    end
+  end
+end

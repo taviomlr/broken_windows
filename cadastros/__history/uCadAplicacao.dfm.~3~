@@ -1,0 +1,17 @@
+inherited frmCadAplicacao: TfrmCadAplicacao
+  Caption = 'Cadastro de Aplica'#231#227'o'
+  TextHeight = 15
+  inherited pgcPrincipal: TPageControl
+    ActivePage = tabManutencao
+    ExplicitWidth = 861
+    ExplicitHeight = 331
+    inherited tabManutencao: TTabSheet
+      Caption = 'Manuten'#231#227'o'
+    end
+  end
+  inherited pnlRodape: TPanel
+    inherited btnNavigator: TDBNavigator
+      Hints.Strings = ()
+    end
+  end
+end

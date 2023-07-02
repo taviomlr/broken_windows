@@ -1,0 +1,40 @@
+inherited frmCadAplicacao: TfrmCadAplicacao
+  Caption = 'Cadastro de Aplica'#231#227'o'
+  ClientWidth = 861
+  ExplicitWidth = 873
+  TextHeight = 15
+  inherited pgcPrincipal: TPageControl
+    Width = 861
+    ActivePage = tabManutencao
+    ExplicitWidth = 861
+    ExplicitHeight = 331
+    inherited tabListagem: TTabSheet
+      ExplicitWidth = 853
+      inherited grdListagem: TDBGrid
+        Width = 853
+      end
+    end
+    inherited tabManutencao: TTabSheet
+      Caption = 'Manuten'#231#227'o'
+      ExplicitWidth = 853
+    end
+  end
+  inherited pnlRodape: TPanel
+    Width = 861
+    DesignSize = (
+      861
+      50)
+    inherited btnNavigator: TDBNavigator
+      Hints.Strings = ()
+    end
+  end
+  inherited pnlListagem: TPanel
+    Width = 861
+  end
+  inherited QryListagem: TZQuery
+    SQL.Strings = (
+      'SELECT id, '
+      '             nome'
+      '  FROM aplicacao')
+  end
+end

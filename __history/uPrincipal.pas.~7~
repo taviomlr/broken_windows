@@ -1,0 +1,58 @@
+unit uPrincipal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, uDTMConexao;
+
+type
+  TfrmPrincipal = class(TForm)
+    mainPrincipal: TMainMenu;
+    Cadastro1: TMenuItem;
+    Registro1: TMenuItem;
+    Consulta1: TMenuItem;
+    Sistema1: TMenuItem;
+    Sistema2: TMenuItem;
+    Mdulo1: TMenuItem;
+    N1: TMenuItem;
+    N2: TMenuItem;
+    N3: TMenuItem;
+    mnuFechar: TMenuItem;
+    BrokenWindow1: TMenuItem;
+    Registros1: TMenuItem;
+    procedure mnuFecharClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmPrincipal: TfrmPrincipal;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmPrincipal.FormCreate(Sender: TObject);
+begin
+  dtmPrincipal := TdtmPrincipal.Create(Self);
+  dtmPrincipal.ConexaoDB.SQLHourGlass := True;
+  dtmPrincipal.ConexaoDB.Protocol := 'mssql';
+  dtmPrincipal.ConexaoDB.Port := 1433;
+  dtmPrincipal.ConexaoDB.HostName := '.\SERVERCURSO';
+  dtmPrincipal.ConexaoDB.Database := 'broken_windows';
+  dtmPrincipal.ConexaoDB.LibraryLocation := 'C:\workspace\Projetos\Delphi\broken_windows\ntwdblib.dll';
+  dtmPrincipal.ConexaoDB.User := 'sa';
+  dtmPrincipal.ConexaoDB.Password := 'S@geBr.2014';
+  dtmPrincipal.ConexaoDB.Connected := True;
+end;
+
+procedure TfrmPrincipal.mnuFecharClick(Sender: TObject);
+begin
+  Application.Terminate;
+end;
+
+end.

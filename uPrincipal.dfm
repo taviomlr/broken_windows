@@ -1,0 +1,60 @@
+object frmPrincipal: TfrmPrincipal
+  Left = 0
+  Top = 0
+  Caption = 'Menu Principal'
+  ClientHeight = 442
+  ClientWidth = 628
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  Menu = mainPrincipal
+  WindowState = wsMaximized
+  OnClose = FormClose
+  OnCreate = FormCreate
+  TextHeight = 15
+  object mainPrincipal: TMainMenu
+    Left = 104
+    Top = 80
+    object Cadastro1: TMenuItem
+      Caption = 'Cadastro'
+      object Sistema1: TMenuItem
+        Caption = 'Aplica'#231#227'o'
+        OnClick = Sistema1Click
+      end
+      object Sistema2: TMenuItem
+        Caption = '-'
+      end
+      object Mdulo1: TMenuItem
+        Caption = 'M'#243'dulo'
+      end
+      object N1: TMenuItem
+        Caption = '-'
+      end
+      object N2: TMenuItem
+        Caption = 'Evento'
+      end
+      object N3: TMenuItem
+        Caption = '-'
+      end
+      object mnuFechar: TMenuItem
+        Caption = 'Fechar'
+        OnClick = mnuFecharClick
+      end
+    end
+    object Registro1: TMenuItem
+      Caption = 'Registro'
+      object BrokenWindow1: TMenuItem
+        Caption = 'Broken Window'
+      end
+    end
+    object Consulta1: TMenuItem
+      Caption = 'Consulta'
+      object Registros1: TMenuItem
+        Caption = 'Registros'
+      end
+    end
+  end
+end
